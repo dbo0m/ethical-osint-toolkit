@@ -1,0 +1,27 @@
+{
+  "default_timeout": 10,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+  "hibp_api_key_env": "HIBP_API_KEY",
+  "social_platforms": [
+    {
+      "name": "GitHub",
+      "pattern": "https://api.github.com/users/{username}",
+      "valid_statuses": [200]
+    },
+    {
+      "name": "GitLab",
+      "pattern": "https://gitlab.com/api/v4/users?username={username}",
+      "valid_statuses": [200]
+    },
+    {
+      "name": "Reddit",
+      "pattern": "https://www.reddit.com/user/{username}/about.json",
+      "valid_statuses": [200]
+    },
+    {
+      "name": "NPM",
+      "pattern": "https://www.npmjs.com/~{username}",
+      "valid_statuses": [200]
+    }
+  ]
+}

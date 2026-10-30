@@ -1,2 +1,6 @@
-# ethical-osint-toolkit
-Ethical OSINT toolkit for username, domain, email, and metadata analysis
+__pycache__/
+*.pyc
+.venv/
+.env
+.pytest_cache/
+.DS_Store

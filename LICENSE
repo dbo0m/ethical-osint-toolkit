@@ -1,0 +1,66 @@
+# Ethical OSINT Toolkit
+
+This project is a Python-based OSINT CLI tool for educational and authorized use only.
+
+## Features
+- Username enumeration across public platforms
+- Domain intelligence (DNS + WHOIS)
+- Email breach lookup via Have I Been Pwned API (if configured)
+- Metadata extraction from images and PDF files
+- Rich CLI interface with progress spinners
+
+## Project structure
+- `main.py` — command-line entry point
+- `modules/` — feature modules
+- `config.json` — configuration file
+- `requirements.txt` — dependencies
+
+## Installation
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+## Usage
+
+Check a username:
+
+```bash
+python main.py --username octocat
+```
+
+Check a domain:
+
+```bash
+python main.py --domain github.com
+```
+
+Check an email (requires `HIBP_API_KEY`):
+
+```bash
+export HIBP_API_KEY="YOUR_API_KEY"
+python main.py --email someone@example.com
+```
+
+Extract metadata from an image or PDF:
+
+```bash
+python main.py --file ./sample.jpg
+```
+
+## Disclaimer
+This tool must only be used for authorized or educational purposes. The user is solely responsible for compliance with local laws and platform terms.
+
+## GitHub repository
+https://github.com/dbo0m/ethical-osint-toolkit
+
+## Phone access
+Open the repository page directly in GitHub mobile app or browser: https://github.com/dbo0m/ethical-osint-toolkit
+
+## Notes
+- Some public platforms may block automated requests. The app handles timeouts and exceptions safely.
+- Not all domain information is always publicly available.
+- Some metadata can include sensitive location or camera information; handle it responsibly.
+
