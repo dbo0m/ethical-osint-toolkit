@@ -1,0 +1,22 @@
+{
+  "name": "ethical-osint-toolkit",
+  "version": "1.0.0",
+  "description": "Professional ethical OSINT toolkit with mobile-friendly interface",
+  "devcontainer": {
+    "name": "ethical-osint-toolkit",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    "features": {
+      "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-python.vscode-pylance",
+          "GitHub.vscode-pull-request-github"
+        ]
+      }
+    },
+    "postCreateCommand": "pip install -r requirements.txt"
+  }
+}
